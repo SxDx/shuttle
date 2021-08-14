@@ -1,9 +1,159 @@
 <template>
-  <div>
-      <h1 class="text-xl font-bold">Inital commit</h1>
+  <div
+    class="
+      flex
+      justify-center
+      items-center
+      w-screen
+      h-screen
+      font-mono
+      relative
+    "
+  >
+    <div
+      id="blob1"
+      class="
+        absolute
+        animate-blob
+        filter
+        blur-xl
+        opacity-50
+        w-96
+        h-96
+        rounded-full
+        left-[45%]
+        top-[25%]
+      "
+    ></div>
+    <div
+      id="blob2"
+      class="
+        absolute
+        animate-blob
+        animation-delay-2000
+        filter
+        blur-xl
+        opacity-50
+        w-96
+        h-96
+        rounded-full
+        right-[45%]
+        top-[25%]
+      "
+    ></div>
+    <div
+      id="blob3"
+      class="
+        absolute
+        animate-blob
+        animation-delay-4000
+        filter
+        blur-xl
+        opacity-50
+        w-96
+        h-96
+        rounded-full
+        right-[30%]
+        top-[35%]
+      "
+    ></div>
+
+    <div
+      class="
+        dark:bg-primary-400/90
+        rounded-2xl
+        shadow-xl
+        w-5/6
+        lg:w-2/3
+        flex
+        overflow-hidden
+        relative
+      "
+    >
+      <div class="hidden md:block w-0 md:w-4/12 relative">
+        <img src="./assets/bg.gif" role="presentation" />
+        <weather />
+      </div>
+      <div class="w-full lg:w-8/12 p-8 flex flex-col">
+        <h1 class="font-semibold text-2xl lg:text-3xl mb-6">Welc0me René</h1>
+        <div class="flex items-center flex-grow-1 h-full">
+          <div
+            class="
+              grid grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-3
+              w-full
+              gap-y-5
+              lg:gap-y-11
+            "
+          >
+            <div v-for="link in links" :key="link.name">
+              <page :config="link" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
-<script setup></script>
+<script setup>
+import Page from "./components/Page.vue";
+import Weather from "./components/Weather.vue";
 
-<style></style>
+const links = [
+  {
+    name: "Github",
+    url: "https://github.com",
+    color: "#FFFFFF",
+  },
+  {
+    name: "G00gle Cl0ud",
+    url: "https://console.cloud.google.com",
+    color: "#1A73E8",
+  },
+  {
+    name: "Timekeep",
+    url: "https://docs.google.com/spreadsheets/d/1qhXNYuYdErDruEBqWiw4NGg2eTTou12EupbO4hF1pb8/edit#gid=1565546804",
+    color: "#2DA363",
+  },
+  {
+    name: "M0ng0db Atlas",
+    url: "https://cloud.mongodb.com",
+    color: "#13AA53",
+  },
+
+  {
+    name: "Hacker News",
+    url: "https://vue-hn.herokuapp.com/top",
+    color: "#CD201F",
+  },
+  {
+    name: "Pr0duct Hunt",
+    url: "https://www.producthunt.com",
+    color: "#DA552F",
+  },
+  {
+    name: "Standard",
+    url: "https://www.derstandard.at/",
+    color: "#E54463",
+  },
+  {
+    name: "Presse",
+    url: "https://diepresse.com/",
+    color: "#01649E",
+  },
+];
+</script>
+
+<style scoped>
+#blob1 {
+  background-color: #ab7280;
+}
+#blob2 {
+  background-color: #517493;
+}
+#blob3 {
+  background-color: #19385c;
+}
+</style>
