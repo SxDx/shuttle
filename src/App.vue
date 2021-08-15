@@ -60,6 +60,7 @@
 
     <div
       class="
+        bg-white/70
         dark:bg-primary-400/90
         rounded-2xl
         shadow-xl
@@ -76,7 +77,7 @@
       </div>
       <div class="w-full lg:w-8/12 p-8 flex flex-col">
         <h1 class="font-semibold text-2xl lg:text-3xl mb-6">Welc0me René</h1>
-        <div class="flex items-center flex-grow-1 h-full">
+        <div class="flex items-center flex-grow-1 h-full backdrop-blur-xl">
           <div
             class="
               grid grid-cols-1
@@ -94,12 +95,14 @@
         </div>
       </div>
     </div>
+    <mode-switch />
   </div>
 </template>
 
 <script setup>
 import Page from "./components/Page.vue";
 import Weather from "./components/Weather.vue";
+import ModeSwitch from "./components/ModeSwitch.vue";
 
 const links = [
   {
@@ -108,7 +111,7 @@ const links = [
     color: "#FFFFFF",
   },
   {
-    name: "G00gle Cl0ud",
+    name: "Google Cloud",
     url: "https://console.cloud.google.com",
     color: "#1A73E8",
   },
@@ -118,7 +121,7 @@ const links = [
     color: "#2DA363",
   },
   {
-    name: "M0ng0db Atlas",
+    name: "Mongodb Atlas",
     url: "https://cloud.mongodb.com",
     color: "#13AA53",
   },
@@ -129,7 +132,7 @@ const links = [
     color: "#CD201F",
   },
   {
-    name: "Pr0duct Hunt",
+    name: "Product Hunt",
     url: "https://www.producthunt.com",
     color: "#DA552F",
   },

@@ -2,7 +2,7 @@
   <div>
     <a
       :href="config.url"
-      class="font-light text-white/70 underline text-sm lg:text-base"
+      class="font-light dark:text-white/70 underline text-sm lg:text-base"
       target="_blank"
       rel="noopener noreferer"
       :data-hover-color="config.color"
