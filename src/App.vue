@@ -116,16 +116,10 @@ const links = [
     color: "#1A73E8",
   },
   {
-    name: "Timekeep",
-    url: "https://docs.google.com/spreadsheets/d/1qhXNYuYdErDruEBqWiw4NGg2eTTou12EupbO4hF1pb8/edit#gid=1565546804",
-    color: "#2DA363",
-  },
-  {
     name: "Mongodb Atlas",
     url: "https://cloud.mongodb.com",
     color: "#13AA53",
   },
-
   {
     name: "Hacker News",
     url: "https://vue-hn.herokuapp.com/top",
@@ -145,6 +139,11 @@ const links = [
     name: "Presse",
     url: "https://diepresse.com/",
     color: "#01649E",
+  },
+  {
+    name: "Verge",
+    url: "https://www.theverge.com",
+    color: "#E2127A",
   },
 ];
 </script>
