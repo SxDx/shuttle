@@ -54,7 +54,7 @@
         h-96
         rounded-full
         right-[30%]
-        top-[35%]
+        top-[45%]
       "
     ></div>
 
