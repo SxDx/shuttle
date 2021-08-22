@@ -18,12 +18,22 @@
 
 <script setup>
 import { ref } from "vue";
+import CryptoJS from "crypto-js";
 
 const loaded = ref(false);
 const temp = ref(0);
 const icon = ref(0);
 
-const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+let apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+const secret = localStorage.secret;
+
+if(secret) {
+  console.log(CryptoJS.AES.encrypt(apiKey, secret).toString());
+
+  const bytes = CryptoJS.AES.decrypt(apiKey, secret);
+  apiKey = bytes.toString(CryptoJS.enc.Utf8);
+}
+
 if (apiKey) {
   const apiBase = "https://api.openweathermap.org/data/2.5/weather";
 
