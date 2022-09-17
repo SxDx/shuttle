@@ -1,4 +1,6 @@
 <template>
+
+
   <div
     class="
       flex
@@ -10,6 +12,8 @@
       relative
     "
   >
+
+
     <div
       id="blob1"
       class="
@@ -25,6 +29,8 @@
         top-[25%]
       "
     ></div>
+
+
     <div
       id="blob2"
       class="
@@ -41,6 +47,8 @@
         top-[25%]
       "
     ></div>
+
+
     <div
       id="blob3"
       class="
@@ -58,6 +66,7 @@
       "
     ></div>
 
+
     <div
       class="
         bg-white/70
@@ -71,33 +80,67 @@
         relative
       "
     >
+
+
       <div class="hidden md:block w-0 md:w-4/12 relative">
+
+
         <img src="./assets/bg.gif" role="presentation" />
+
+
         <weather />
+
+
       </div>
+
+
       <div class="w-full lg:w-8/12 p-8 flex flex-col">
-        <h1 class="font-semibold text-2xl lg:text-3xl mb-6">Welc0me René</h1>
+
+
         <div class="flex items-center flex-grow-1 h-full backdrop-blur-xl">
+
+
           <div
             class="
-              grid grid-cols-1
-              md:grid-cols-2
+              grid grid-cols-2
               lg:grid-cols-3
               w-full
               gap-y-5
               lg:gap-y-11
+              gap-x-2
             "
           >
+
+
             <div v-for="link in links" :key="link.name">
+
+
               <page :config="link" />
+
+
             </div>
+
+
           </div>
+
+
         </div>
+
+
       </div>
+
+
     </div>
+
+
     <mode-switch />
+
+
   </div>
+
+
 </template>
+
 
 <script setup>
 import Page from "./components/Page.vue";
@@ -116,11 +159,6 @@ const links = [
     color: "#1A73E8",
   },
   {
-    name: "Mongodb Atlas",
-    url: "https://cloud.mongodb.com",
-    color: "#13AA53",
-  },
-  {
     name: "Hacker News",
     url: "https://vue-hn.herokuapp.com/top",
     color: "#CD201F",
@@ -131,9 +169,9 @@ const links = [
     color: "#DA552F",
   },
   {
-    name: "Standard",
-    url: "https://www.derstandard.at/",
-    color: "#E54463",
+    name: "The Guardian",
+    url: "https://www.theguardian.com/international",
+    color: "#FFFFFF",
   },
   {
     name: "Presse",
@@ -145,8 +183,14 @@ const links = [
     url: "https://www.theverge.com",
     color: "#E2127A",
   },
+  {
+    name: "Stratechery",
+    url: "https://stratechery.com",
+    color: "#FAA633",
+  },
 ];
 </script>
+
 
 <style scoped>
 #blob1 {
@@ -159,3 +203,5 @@ const links = [
   background-color: #19385c;
 }
 </style>
+
+
