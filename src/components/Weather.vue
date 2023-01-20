@@ -1,16 +1,7 @@
 <template>
   <div
     v-if="loaded"
-    class="
-      absolute
-      top-2
-      right-2
-      text-lg
-      font-light
-      text-white/70
-      flex
-      items-center
-    "
+    class="absolute top-2 right-2 text-lg font-light text-white/70 flex items-center"
   >
     <i class="wi mr-2" :class="icon"></i> <span>{{ temp }}°C</span>
   </div>
@@ -27,9 +18,8 @@ const icon = ref(0);
 let apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 const secret = localStorage.secret;
 
-if(secret) {
-  console.log(CryptoJS.AES.encrypt(apiKey, secret).toString());
-
+if (secret) {
+  // console.log(CryptoJS.AES.encrypt(apiKey, secret).toString());
   const bytes = CryptoJS.AES.decrypt(apiKey, secret);
   apiKey = bytes.toString(CryptoJS.enc.Utf8);
 }
