@@ -56,7 +56,7 @@ const links = [
   },
   {
     name: "Hacker News",
-    url: "news.ycombinator.com",
+    url: "https://news.ycombinator.com",
     color: "#CD201F",
   },
   {
